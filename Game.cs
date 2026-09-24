@@ -1,5 +1,7 @@
 ﻿// Include the namespaces (code libraries) you need below.
+
 using System;
+
 using System.Numerics;
 
 // The namespace your code is in.
@@ -22,63 +24,102 @@ namespace MohawkGame2D
 
             
 
-            Window.SetSize(1280, 720);
+            Window.SetSize(400, 400);
+
+
+
+            
 
         }
 
-        public void ToggleFlashlight()
-        {
-            if (Input.IsKeyboardKeyDown(KeyboardKey.Space) == true)
-            {
-                FlashlightOn = true;
-            }
-            if (Input.IsKeyboardKeyUp(KeyboardKey.Space) == true)
-            {
-                FlashlightOn = false;
-            }
-        }
+        //public void ToggleFlashlight()
+        //{
+        //    if (Input.IsKeyboardKeyDown(KeyboardKey.Space) == true)
+        //    {
+        //        FlashlightOn = true;
+        //    }
+        //    if (Input.IsKeyboardKeyUp(KeyboardKey.Space) == true)
+        //    {
+        //        FlashlightOn = false;
+        //    }
+        //}
 
         public void faces()
         {
             Draw.SetFillColor(246);
-            Draw.Circle(Window.Width / Random.Integer(5, 15), Window.Height / Random.Integer(5, 15), 30);
+            Draw.Circle(Random.Integer(10, 1270), Random.Integer(10, 710), 30);
         }
 
         /// <summary>
         ///     Update runs every frame
-        /// </summary>
-        ///         I knew that already!!!!! *aggressively flips the bird at you with both hands* - Hahs
-        ///         
-        //public static bool !IsMouseButtonDown(MouseButton Mouse1)
-        //{
-        //    return 0;
-        //}
+        /// </summary>       
+
+        //random coordinates for generating the objects
+
+        public static int RandomCoordinate = Random.Integer(10, 390);
+            
+
         public void Update()
         {
-            Window.ClearBackground(0);
             Draw.SetLineSize(0);
 
-            faces();
+            Window.ClearBackground(0);
 
-           // Draw.SetFillColor(240);
+            //vars involving the points
+
+            bool GeneratePoint = true;
+
+
 
             // the flashlight
-           ToggleFlashlight();
+
+            //ToggleFlashlight();
+
+            if (Input.IsKeyboardKeyDown(KeyboardKey.Space) == true)
+            {
+                FlashlightOn = true;
+            }
+            else
+            {
+                FlashlightOn = false;
+            }
+
+            //if (flashlight == true)
+            //{
+            //    Draw.SetFillColor(255);
+
+            //    Draw.Circle(Window.Width / 2, Window.Height / 2, 100);
+
+            //}
+            //flashlight = false;
+
             if (FlashlightOn == true)
             {
-                Draw.SetFillColor(130);
+                Draw.SetFillColor(230, 128);
 
-                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 100);
+                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 30);
 
-                Draw.SetFillColor(180);
+                Draw.SetFillColor(255, 148);
 
-                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 50);
+                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 15);
 
-                Draw.SetFillColor(240);
-
-                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 10);
+                //while (Name == true)
+                //{
+                //    faces();
+                //}
+                //Name = false;
             }
-        }
-    }
 
-}
+                if (GeneratePoint == true)
+                {
+                    Draw.SetFillColor(240);
+
+                    Draw.Circle(RandomCoordinate, RandomCoordinate, 15);
+
+                }
+            GeneratePoint = false;
+            }
+
+        }
+
+    }
