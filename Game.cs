@@ -54,10 +54,19 @@ namespace MohawkGame2D
         ///     Update runs every frame
         /// </summary>       
 
-        //random coordinates for generating the objects
+        //random coordinates for generating 3 objects
 
-        public static int RandomCoordinate = Random.Integer(10, 390);
-            
+        public static int RandomCoordinate1x = Random.Integer(10, 390);
+
+        public static int RandomCoordinate2x = Random.Integer(30, 370);
+
+        public static int RandomCoordinate3x = Random.Integer(50, 350);
+
+        public static int RandomCoordinate1y = Random.Integer(10, 390);
+
+        public static int RandomCoordinate2y = Random.Integer(30, 370);
+
+        public static int RandomCoordinate3y = Random.Integer(50, 350);
 
         public void Update()
         {
@@ -112,11 +121,22 @@ namespace MohawkGame2D
 
                 if (GeneratePoint == true)
                 {
-                    Draw.SetFillColor(240);
 
-                    Draw.Circle(RandomCoordinate, RandomCoordinate, 15);
+                    // three circles to find
 
-                }
+                    Draw.SetFillColor(0);
+
+                    Draw.Circle(RandomCoordinate1x, RandomCoordinate1y, 15);
+
+                    Draw.SetFillColor(0);
+
+                    Draw.Circle(RandomCoordinate2x, RandomCoordinate2y, 15);
+
+                    Draw.SetFillColor(0);
+
+                    Draw.Circle(RandomCoordinate3x, RandomCoordinate3y, 15);
+
+            }
             GeneratePoint = false;
             }
 
