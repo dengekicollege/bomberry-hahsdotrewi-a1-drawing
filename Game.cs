@@ -20,7 +20,7 @@ namespace MohawkGame2D
 
         public void Setup()
         {
-            Window.SetTitle("My Dingle!");
+            Window.SetTitle("Find the Ellipses!");
 
             
 
