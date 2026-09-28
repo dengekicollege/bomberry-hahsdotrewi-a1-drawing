@@ -124,15 +124,15 @@ namespace MohawkGame2D
 
                     // three circles to find
 
-                    Draw.SetFillColor(0);
+                    Draw.SetFillColor(0 , 191);
 
                     Draw.Circle(RandomCoordinate1x, RandomCoordinate1y, 15);
 
-                    Draw.SetFillColor(0);
+                    Draw.SetFillColor(0 , 191);
 
                     Draw.Circle(RandomCoordinate2x, RandomCoordinate2y, 15);
 
-                    Draw.SetFillColor(0);
+                    Draw.SetFillColor(0, 191);
 
                     Draw.Circle(RandomCoordinate3x, RandomCoordinate3y, 15);
 
