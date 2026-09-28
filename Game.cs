@@ -44,11 +44,11 @@ namespace MohawkGame2D
         //    }
         //}
 
-        public void faces()
-        {
-            Draw.SetFillColor(246);
-            Draw.Circle(Random.Integer(10, 1270), Random.Integer(10, 710), 30);
-        }
+        //public void faces()
+        //{
+        //    Draw.SetFillColor(246);
+        //    Draw.Circle(Random.Integer(10, 1270), Random.Integer(10, 710), 30);
+        //}
 
         /// <summary>
         ///     Update runs every frame
@@ -58,15 +58,15 @@ namespace MohawkGame2D
 
         public static int RandomCoordinate1x = Random.Integer(10, 390);
 
-        public static int RandomCoordinate2x = Random.Integer(30, 370);
+        public static int RandomCoordinate2x = Random.Integer(30, 390);
 
-        public static int RandomCoordinate3x = Random.Integer(50, 350);
+        public static int RandomCoordinate3x = Random.Integer(50, 390);
 
-        public static int RandomCoordinate1y = Random.Integer(10, 390);
+        public static int RandomCoordinate1y = Random.Integer(30, 390);
 
-        public static int RandomCoordinate2y = Random.Integer(30, 370);
+        public static int RandomCoordinate2y = Random.Integer(10, 390);
 
-        public static int RandomCoordinate3y = Random.Integer(50, 350);
+        public static int RandomCoordinate3y = Random.Integer(30, 390);
 
         public void Update()
         {
@@ -106,7 +106,7 @@ namespace MohawkGame2D
             {
                 Draw.SetFillColor(230, 128);
 
-                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 30);
+                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 39);
 
                 Draw.SetFillColor(255, 148);
 
